@@ -1,3 +1,6 @@
+import React from 'react';
+import { render } from 'react-dom';
+
 const ce = React.createElement;
 
 const MyTitle = function(props) {
@@ -13,10 +16,10 @@ const MyFirstComponent = function() {
     'div',
     { id: 'some-id' },
     ce(MyTitle, { title: 'Game of Thrones', color: 'YellowGreen' }),
-    ce(MyTitle, { title: 'Homeland', color: 'Aquamarine' }),
-    ce(MyTitle, { title: 'The Good Fight', color: 'LimeGreen' }),
+    ce(MyTitle, { title: 'Homeland', color: 'Papaya' }),
+    ce(MyTitle, { title: 'House of Cards', color: 'LimeGreen' }),
     ce(MyTitle, { title: 'Stranger Things', color: 'Peru' })
   );
 };
 
-ReactDOM.render(ce(MyFirstComponent), document.getElementById('app'));
+render(ce(MyFirstComponent), document.getElementById('app'));
