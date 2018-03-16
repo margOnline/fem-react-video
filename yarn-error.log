@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn lint
+  /usr/local/bin/node /usr/local/bin/yarn prettier
 
 PATH: 
-  /usr/local/bin:/Users/margourey/.rvm/gems/ruby-2.4.1/bin:/Users/margourey/.rvm/gems/ruby-2.4.1@global/bin:/Users/margourey/.rvm/rubies/ruby-2.4.1/bin:/Users/margourey/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin/elasticsearch-1.7.0/bin:/usr/locat/opt/mysql@5.5/bin:usr/local/bin:/usr/local/bin:/Users/margourey/.rvm/bin
+  /Users/margourey/.rvm/gems/ruby-2.3.3/bin:/Users/margourey/.rvm/gems/ruby-2.3.3@global/bin:/Users/margourey/.rvm/rubies/ruby-2.3.3/bin:/Users/margourey/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin/elasticsearch-1.7.0/bin:/usr/locat/opt/mysql@5.5/bin:usr/local/bin:/usr/local/bin:/Users/margourey/.rvm/bin:/Users/margourey/.rvm/bin
 
 Yarn version: 
   1.5.1
@@ -5568,7 +5568,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c eslint **/*.{js,jsx} --quiet
+  Arguments: -c /Users/margourey/frontend_masters/complete-intro-to-react/node_modules/.bin/prettier
   Directory: /Users/margourey/frontend_masters/complete-intro-to-react
   Output:
   

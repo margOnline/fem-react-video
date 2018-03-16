@@ -1,23 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
+import Landing from './Landing';
 
-const MyTitle = function(props) {
-  return (
-    <div>
-      <h1 style={{ color: props.color }}>{props.title}</h1>
+const App = () => (
+  <HashRouter>
+    <div className="app">
+      <Route exact path="/" component={Landing} />
     </div>
-  );
-};
+  </HashRouter>
+);
 
-const MyFirstComponent = function() {
-  return (
-    <div id="some-id">
-      <MyTitle title="Game of Thrones" color="YellowGreen" />
-      <MyTitle title="House of Cards" color="BurleyWood" />
-      <MyTitle title="Homeland" color="Aquamarine" />
-      <MyTitle title="Stranger Things" color="LimeGreen" />
-    </div>
-  );
-};
-
-render(<MyFirstComponent />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
