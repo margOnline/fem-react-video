@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn prettier
+  /usr/local/bin/node /usr/local/bin/yarn dev
 
 PATH: 
-  /Users/margourey/.rvm/gems/ruby-2.3.3/bin:/Users/margourey/.rvm/gems/ruby-2.3.3@global/bin:/Users/margourey/.rvm/rubies/ruby-2.3.3/bin:/Users/margourey/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin/elasticsearch-1.7.0/bin:/usr/locat/opt/mysql@5.5/bin:usr/local/bin:/usr/local/bin:/Users/margourey/.rvm/bin:/Users/margourey/.rvm/bin
+  /Users/margo/.rvm/gems/ruby-2.2.7/bin:/Users/margo/.rvm/gems/ruby-2.2.7@global/bin:/Users/margo/.rvm/rubies/ruby-2.2.7/bin:/usr/local/opt/openssl/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/Users/margo/bin:/Users/margo/.nvm/versions/node/v6.8.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/margo/.rvm/bin
 
 Yarn version: 
   1.5.1
@@ -16,13 +16,20 @@ Platform:
 npm manifest: 
   {
       "scripts": {
-          "api": "node ratingsAPI.js",
-          "build": "webpack",
-          "format":
-              "prettier --write --single-quote --print-width=80 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
-          "lint": "eslint **/*.{js,jsx} --quiet",
-          "watch": "webpack --watch"
+        "api": "node ratingsAPI.js",
+        "build": "webpack",
+        "dev": "webpack-dev-server",
+        "format":
+            "prettier --write --single-quote --print-width=80 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+        "lint": "eslint **/*.{js,jsx} --quiet",
+        "test": "jest",
+        "test:coverage": "jest -- --coverage",
+        "test:update": "jest -u",
+        "watch": "webpack --watch"
       },
+      "jest": {
+        "snapshotSerializers": ["jest-serializer-enzyme"]
+      },    
       "dependencies": {
           "axios": "0.16.1",
           "babel-plugin-dynamic-import-webpack": "1.0.1",
@@ -5568,8 +5575,8 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c /Users/margourey/frontend_masters/complete-intro-to-react/node_modules/.bin/prettier
-  Directory: /Users/margourey/frontend_masters/complete-intro-to-react
+  Arguments: -c webpack-dev-server
+  Directory: /Users/margo/frontend_exercises/fem-react-video
   Output:
   
       at ProcessTermError.Error (native)
