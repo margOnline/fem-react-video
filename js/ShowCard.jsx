@@ -1,14 +1,19 @@
-import React from 'react';
-import { shape, string } from 'prop-types';
-import styled from 'styled-components';
+// @flow
 
-const Wrapper = styled.div`
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+// FlowFixMe
+const Wrapper = styled((Link: any))`
   width: 32%;
   border: 2px solid #333;
   border-radius: 4px;
   margin-bottom: 25px;
   padding-right: 10px;
   overflow: hidden;
+  color: black;
+  text-decoration: none;
 `;
 
 const Image = styled.img`
@@ -17,24 +22,15 @@ const Image = styled.img`
   margin-right: 25px;
 `;
 
-const ShowCard = props => (
-  <Wrapper>
-    <Image alt={`${props.show.title} Show Poster`} src={`/public/img/posters/${props.show.poster}`} />
+const ShowCard = (props: Show) => (
+  <Wrapper to={`/details/${props.imdbID}`}>
+    <Image alt={`${props.title} Show Poster`} src={`/public/img/posters/${props.poster}`} />
     <div>
-      <h3>{props.show.title}</h3>
-      <h4>({props.show.year})</h4>
-      <p>{props.show.description}</p>
+      <h3>{props.title}</h3>
+      <h4>({props.year})</h4>
+      <p>{props.description}</p>
     </div>
   </Wrapper>
 );
-
-ShowCard.propTypes = {
-  show: shape({
-    poster: string.isRequired,
-    title: string.isRequired,
-    year: string.isRequired,
-    description: string.isRequired
-  }).isRequired
-}
 
 export default ShowCard;

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn dev
+  /usr/local/bin/node /usr/local/bin/yarn flow
 
 PATH: 
   /Users/margo/.rvm/gems/ruby-2.2.7/bin:/Users/margo/.rvm/gems/ruby-2.2.7@global/bin:/Users/margo/.rvm/rubies/ruby-2.2.7/bin:/usr/local/opt/openssl/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/Users/margo/bin:/Users/margo/.nvm/versions/node/v6.8.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/margo/.rvm/bin
@@ -5573,9 +5573,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: sh
-  Arguments: -c webpack-dev-server
+  Arguments: -c /Users/margo/frontend_exercises/fem-react-video/node_modules/.bin/flow
   Directory: /Users/margo/frontend_exercises/fem-react-video
   Output:
   
